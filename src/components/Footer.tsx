@@ -32,13 +32,13 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/sachit',
+      href: 'https://github.com/sachitkaistha',
       icon: Github,
       color: 'hover:text-gray-400'
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/sachit',
+      href: 'https://www.linkedin.com/in/sachit-kaistha-306849190',
       icon: Linkedin,
       color: 'hover:text-blue-400'
     },

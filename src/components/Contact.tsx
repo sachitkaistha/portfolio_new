@@ -182,7 +182,7 @@ const Contact: React.FC = () => {
                   </p>
                   <div className="flex justify-center gap-4">
                     <a 
-                      href="https://github.com/sachit" 
+                      href="https://github.com/sachitkaistha" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-3 rounded-full bg-gradient-to-br from-slate-800 to-slate-600 text-white shadow-lg hover:scale-110 transition-all duration-300 hover:shadow-xl"
@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
                       <Github className="w-5 h-5" />
                     </a>
                     <a 
-                      href="https://linkedin.com/in/sachit" 
+                      href="https://www.linkedin.com/in/sachit-kaistha-306849190" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-3 rounded-full bg-gradient-to-br from-blue-600 to-blue-500 text-white shadow-lg hover:scale-110 transition-all duration-300 hover:shadow-xl"

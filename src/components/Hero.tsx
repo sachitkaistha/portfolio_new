@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Download, Github, Linkedin, Mail, ChevronDown, Mail as MailIcon } from 'lucide-react';
 import AnimatedAvatar from './AnimatedAvatar';
 import HireButton from './HireButton';
+import GitHubStats from './GitHubStats';
 
 const taglines = [
   'Building bridges between code and cloud.',
@@ -165,15 +166,15 @@ const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
               </button>
               <div className="flex gap-4">
-                <a href="#" className="p-3 bg-gradient-to-br from-white/30 to-blue-100 dark:from-slate-800/50 dark:to-blue-900 rounded-lg hover:bg-white/40 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-110 shadow-md relative group animated-social" title="GitHub">
+                <a href="https://github.com/sachitkaistha" target="_blank" rel="noopener noreferrer" className="p-3 bg-gradient-to-br from-white/30 to-blue-100 dark:from-slate-800/50 dark:to-blue-900 rounded-lg hover:bg-white/40 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-110 shadow-md relative group animated-social" title="GitHub">
                   <Github className="w-5 h-5 text-slate-600 dark:text-slate-300" />
                   <span className="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-slate-800 text-white text-xs rounded px-2 py-1 pointer-events-none transition-all">GitHub</span>
                 </a>
-                <a href="#" className="p-3 bg-gradient-to-br from-white/30 to-blue-100 dark:from-slate-800/50 dark:to-blue-900 rounded-lg hover:bg-white/40 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-110 shadow-md relative group animated-social" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/sachit-kaistha-306849190" target="_blank" rel="noopener noreferrer" className="p-3 bg-gradient-to-br from-white/30 to-blue-100 dark:from-slate-800/50 dark:to-blue-900 rounded-lg hover:bg-white/40 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-110 shadow-md relative group animated-social" title="LinkedIn">
                   <Linkedin className="w-5 h-5 text-slate-600 dark:text-slate-300" />
                   <span className="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-slate-800 text-white text-xs rounded px-2 py-1 pointer-events-none transition-all">LinkedIn</span>
                 </a>
-                <a href="#" className="p-3 bg-gradient-to-br from-white/30 to-blue-100 dark:from-slate-800/50 dark:to-blue-900 rounded-lg hover:bg-white/40 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-110 shadow-md relative group animated-social" title="Email">
+                <a href="mailto:skaistha16@gmail.com" className="p-3 bg-gradient-to-br from-white/30 to-blue-100 dark:from-slate-800/50 dark:to-blue-900 rounded-lg hover:bg-white/40 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-110 shadow-md relative group animated-social" title="Email">
                   <Mail className="w-5 h-5 text-slate-600 dark:text-slate-300" />
                   <span className="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-slate-800 text-white text-xs rounded px-2 py-1 pointer-events-none transition-all">Email</span>
                 </a>
@@ -185,26 +186,9 @@ const Hero: React.FC = () => {
             <AnimatedAvatar />
           </div>
         </div>
-        {/* GitHub Stats Card */}
-        <div className="mx-auto mt-8 max-w-xs bg-white/80 dark:bg-slate-800/80 rounded-2xl shadow-lg p-6 flex flex-col items-center gap-2 border border-white/30 dark:border-slate-700/30 github-stats-card">
-          <div className="flex items-center gap-2 text-lg font-semibold text-slate-700 dark:text-slate-200">
-            <Github className="w-5 h-5" />
-            GitHub Stats
-          </div>
-          <div className="flex gap-6 mt-2 text-slate-600 dark:text-slate-300">
-            <div className="flex flex-col items-center">
-              <span className="font-bold text-xl">--</span>
-              <span className="text-xs">Repos</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="font-bold text-xl">--</span>
-              <span className="text-xs">Stars</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="font-bold text-xl">--</span>
-              <span className="text-xs">Followers</span>
-            </div>
-          </div>
+        {/* GitHub Stats Component */}
+        <div className="mx-auto mt-8 max-w-sm">
+          <GitHubStats />
         </div>
       </div>
       {/* Call to Action Scroll Indicator */}
