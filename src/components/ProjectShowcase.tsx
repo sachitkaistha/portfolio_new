@@ -34,6 +34,7 @@ const ProjectShowcase: React.FC = () => {
       techStack: ["Python", "Streamlit", "Scikit-learn", "Gemini API", "Docker", "Paramiko"],
       image: "🚀",
       color: "from-blue-500 to-cyan-500",
+      githubUrl: "https://github.com/sachitkaistha/devflow-ai",
       features: [
         "Remote Docker management over SSH",
         "AI-powered commute estimation",
@@ -56,6 +57,7 @@ const ProjectShowcase: React.FC = () => {
       techStack: ["Python", "Streamlit", "Docker", "SSH", "Subprocess"],
       image: "🐳",
       color: "from-purple-500 to-pink-500",
+      githubUrl: "https://github.com/sachitkaistha/remote-docker-manager",
       features: [
         "Secure SSH connectivity",
         "Container lifecycle management",
@@ -78,6 +80,7 @@ const ProjectShowcase: React.FC = () => {
       techStack: ["Python", "Gradio", "Gemini API", "OpenAI SDK"],
       image: "📖",
       color: "from-green-500 to-emerald-500",
+      githubUrl: "https://github.com/sachitkaistha/ai-story-cowriter",
       features: [
         "Mood-based story generation",
         "One sentence at a time progression",
@@ -99,6 +102,7 @@ const ProjectShowcase: React.FC = () => {
       techStack: ["Python", "Gemini API", "Gradio", "OpenAI SDK"],
       image: "💻",
       color: "from-orange-500 to-red-500",
+      githubUrl: "https://github.com/sachitkaistha/gemini-code-generator",
       features: [
         "Multi-language code generation",
         "Real-time AI assistance",
@@ -120,6 +124,7 @@ const ProjectShowcase: React.FC = () => {
       techStack: ["Python", "Linux", "Bash", "Red Hat Enterprise Linux"],
       image: "🐧",
       color: "from-teal-500 to-blue-500",
+      githubUrl: "https://github.com/sachitkaistha/linux-command-menu",
       features: [
         "Menu-driven interface",
         "Common system commands",
@@ -141,6 +146,7 @@ const ProjectShowcase: React.FC = () => {
       techStack: ["Python", "Twilio API", "Gradio", "WhatsApp API", "Voice API"],
       image: "📱",
       color: "from-yellow-500 to-orange-500",
+      githubUrl: "https://github.com/sachitkaistha/ai-communication-suite",
       features: [
         "Multi-channel messaging",
         "AI-powered voice calls",
@@ -163,6 +169,7 @@ const ProjectShowcase: React.FC = () => {
       techStack: ["HTML5", "CSS3", "JavaScript", "WebRTC"],
       image: "📸",
       color: "from-pink-500 to-purple-500",
+      githubUrl: "https://github.com/sachitkaistha/photo-capture-app",
       features: [
         "Real-time webcam access",
         "High-resolution capture (1280x720)",
@@ -266,10 +273,15 @@ const ProjectShowcase: React.FC = () => {
                       <Play className="w-4 h-4" />
                       <span className="text-sm font-medium">Demo</span>
                     </button>
-                    <button className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-lg transition-colors duration-200">
+                    <a 
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-lg transition-colors duration-200"
+                    >
                       <Github className="w-4 h-4" />
                       <span className="text-sm font-medium">Code</span>
-                    </button>
+                    </a>
                   </div>
 
                   {/* Hover overlay */}
@@ -383,10 +395,15 @@ const ProjectShowcase: React.FC = () => {
                       <ExternalLink className="w-5 h-5" />
                       Live Demo
                     </button>
-                    <button className="flex items-center gap-2 px-6 py-3 bg-slate-800 dark:bg-slate-600 text-white rounded-lg hover:scale-105 transition-transform duration-200">
+                    <a 
+                      href={projects[selectedProject].githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 bg-slate-800 dark:bg-slate-600 text-white rounded-lg hover:scale-105 transition-transform duration-200"
+                    >
                       <Github className="w-5 h-5" />
                       View Code
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
