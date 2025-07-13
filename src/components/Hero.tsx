@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Download, Github, Linkedin, Mail, ChevronDown, Mail as MailIcon } from 'lucide-react';
 import AnimatedAvatar from './AnimatedAvatar';
 import HireButton from './HireButton';
-import GitHubStats from './GitHubStats';
 
 const taglines = [
   'Building bridges between code and cloud.',
@@ -185,10 +184,6 @@ const Hero: React.FC = () => {
           <div className="flex justify-center relative z-10">
             <AnimatedAvatar />
           </div>
-        </div>
-        {/* GitHub Stats Component */}
-        <div className="mx-auto mt-8 max-w-sm">
-          <GitHubStats />
         </div>
       </div>
       {/* Call to Action Scroll Indicator */}
