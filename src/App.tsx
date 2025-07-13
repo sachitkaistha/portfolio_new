@@ -8,7 +8,6 @@ import Experience from './components/Experience';
 import Certifications from './components/Certifications';
 import ProjectShowcase from './components/ProjectShowcase';
 import EnhancedContactForm from './components/EnhancedContactForm';
-import RecentUpdates from './components/RecentUpdates';
 import Footer from './components/Footer';
 import ThreeBackground from './components/ThreeBackground';
 import FloatingChat from './components/FloatingChat';
@@ -81,6 +80,7 @@ function App() {
               </div>
               <div className="hidden md:flex space-x-8">
                 {['about', 'skills', 'education', 'experience', 'projects', 'updates', 'contact'].map((section) => (
+                {['about', 'skills', 'education', 'experience', 'projects', 'contact'].map((section) => (
                   <button
                     key={section}
                     onClick={() => scrollToSection(section)}
@@ -112,7 +112,6 @@ function App() {
           <Experience />
           <Certifications />
           <ProjectShowcase />
-          <RecentUpdates />
           <EnhancedContactForm />
         </main>
 
