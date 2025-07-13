@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import theme styles */
+@import './styles/themes.css';
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,6 +12,29 @@
   
   body {
     overflow-x: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  /* Fluid typography */
+  h1 { font-size: clamp(2rem, 5vw, 4rem); }
+  h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
+  h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+  h4 { font-size: clamp(1.25rem, 2.5vw, 1.875rem); }
+  h5 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
+  h6 { font-size: clamp(1rem, 1.5vw, 1.25rem); }
+  
+  /* Ensure minimum touch target sizes */
+  button, a, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Line clamping utility */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
@@ -33,6 +59,10 @@
     animation: bounce-in 0.5s ease-out;
   }
   
+  .animate-shine {
+    animation: shine 2s linear infinite;
+  }
+  
   @keyframes float {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
@@ -48,6 +78,11 @@
     50% { transform: scale(1.05) translateY(-10px); }
     70% { transform: scale(0.9) translateY(5px); }
     100% { transform: scale(1) translateY(0px); opacity: 1; }
+  }
+  
+  @keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
   }
   
   /* Custom scrollbar */
@@ -80,6 +115,20 @@
     background: #64748b;
   }
   
+  /* Responsive grid utilities */
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-responsive {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+  
   /* Smooth focus transitions */
   input:focus, textarea:focus, button:focus {
     outline: none;
@@ -88,19 +137,20 @@
   
   /* Gradient text */
   .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, var(--accent-tertiary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    background-size: 200% 200%;
+    animation: gradientMove 4s linear infinite;
   }
   
   /* Glowing effect */
   .glow {
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+    box-shadow: 0 0 20px var(--accent-primary);
   }
   
-  .dark .glow {
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  /* Performance optimizations */
   }
 }
 
