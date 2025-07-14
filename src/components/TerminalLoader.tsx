@@ -23,8 +23,8 @@ const TerminalLoader: React.FC<TerminalLoaderProps> = ({ onComplete }) => {
     if (currentLine >= lines.length) {
       setTimeout(() => {
         setIsComplete(true);
-        setTimeout(onComplete, 500);
-      }, 1000);
+        setTimeout(onComplete, 200);
+      }, 400);
       return;
     }
 
@@ -32,13 +32,13 @@ const TerminalLoader: React.FC<TerminalLoaderProps> = ({ onComplete }) => {
     if (currentChar < line.length) {
       const timer = setTimeout(() => {
         setCurrentChar(currentChar + 1);
-      }, 50);
+      }, 25);
       return () => clearTimeout(timer);
     } else {
       const timer = setTimeout(() => {
         setCurrentLine(currentLine + 1);
         setCurrentChar(0);
-      }, 500);
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [currentLine, currentChar, lines, onComplete]);
