@@ -8,8 +8,6 @@ import Certifications from './components/Certifications';
 import ProjectShowcase from './components/ProjectShowcase';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import FloatingChat from './components/FloatingChat';
-import ParticleBackground from './components/ParticleBackground';
 import TerminalLoader from './components/TerminalLoader';
 import { useTheme } from './hooks/useTheme';
 
@@ -35,9 +33,6 @@ function App() {
       {/* Terminal Loader */}
       {isLoading && <TerminalLoader onComplete={handleLoadingComplete} />}
       
-      {/* Particle Background */}
-      <ParticleBackground />
-      
       {/* Main Content */}
       <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Hero />
@@ -49,9 +44,6 @@ function App() {
         <ProjectShowcase />
         <Contact />
         <Footer />
-        
-        {/* Floating Chat Component */}
-        <FloatingChat />
       </div>
     </div>
   );

@@ -12,9 +12,7 @@ const TerminalLoader: React.FC<TerminalLoaderProps> = ({ onComplete }) => {
 
   const lines = [
     '> Initializing Sachit Portfolio System...',
-    '> Loading DevOps modules... ✓',
-    '> Connecting to cloud services... ✓',
-    '> Deploying backend services... ✓',
+    '> Loading modules... ✓',
     '> Optimizing performance... ✓',
     '> System ready! Welcome to the future.'
   ];
@@ -32,13 +30,13 @@ const TerminalLoader: React.FC<TerminalLoaderProps> = ({ onComplete }) => {
     if (currentChar < line.length) {
       const timer = setTimeout(() => {
         setCurrentChar(currentChar + 1);
-      }, 25);
+      }, 15);
       return () => clearTimeout(timer);
     } else {
       const timer = setTimeout(() => {
         setCurrentLine(currentLine + 1);
         setCurrentChar(0);
-      }, 200);
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [currentLine, currentChar, lines, onComplete]);
